@@ -9,7 +9,7 @@
 # 2019-03-02
 
 # The Adafruit_DHT module provides the means to access the sensor
-import Adafruit_DHT, datetime, RPi.GPIO as GPIO
+import Adafruit_DHT, datetime
 from time import *
 
 # Identify the sensor; we have the DHT22
@@ -17,7 +17,7 @@ sensor = Adafruit_DHT.DHT22
 # Use GPIO17 for input (physical pin 11; GPIO Gen 0)
 gpio = 17
 # Identify file for output
-filename = "/home/peter/Coding/python/DHTdata/temp_hdty_log.csv"
+filename = "/home/peter/dht/th_log.csv"
 
 readingDateTime = datetime.datetime.now()
 readingDate = str(readingDateTime.strftime("%Y-%m-%d"))
@@ -32,6 +32,4 @@ f.write(readingDate+",")
 f.write(readingTime+",")
 f.write(str("{:.1f},".format(temp)))
 f.write(str("{:.1f}\n".format(hdty)))
-f.close() 
-
-GPIO.cleanup()
+f.close()
