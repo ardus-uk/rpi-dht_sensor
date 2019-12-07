@@ -4,8 +4,8 @@
 </head>
 <body style="font-family: Sans-Serif;">
 <?php 
-$path = "/home/peter/Coding/python/DHTdata/";
-$filename = "temp_hdty_log.csv";
+$path = "/home/peter/dht/";
+$filename = "th_log.csv";
 echo "<h2>Temperature and Humidity data</h2>\n";
 echo "<h3>from Raspberry Pi u3apeter</h3>\n"; 
 echo "<h3>Reading data from file: ".$filename."</h3>\n"; 
@@ -15,13 +15,13 @@ echo '<table style="text-align:center; border="0">';
 echo "\n";
 echo '<tr>';
 echo "\n";
-echo '<th width="25%" bgcolor= "'.$column_colours[0].'">Date</th>';
+echo '<th width="20%" bgcolor= "'.$column_colours[0].'">Date</th>';
 echo "\n";
-echo '<th width="25%" bgcolor= "'.$column_colours[1].'">Time</th>';
+echo '<th width="20%" bgcolor= "'.$column_colours[1].'">Time</th>';
 echo "\n";
-echo '<th width="25%" bgcolor= "'.$column_colours[2].'">Temperature (C)</th>';
+echo '<th width="30%" bgcolor= "'.$column_colours[2].'">Temperature (C)</th>';
 echo "\n";
-echo '<th width="25%" bgcolor= "'.$column_colours[3].'">Humidity (%)</th>';
+echo '<th width="30%" bgcolor= "'.$column_colours[3].'">Relative Humidity (%)</th>';
 echo "\n";
 echo '</tr>';
 echo "\n";
