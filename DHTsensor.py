@@ -3,7 +3,7 @@
 """Get temperature and humidity from a sensor, using the Raspberry Pi
 """
 
-# dhtcron.py
+# DHTsensor.py
 # DHT Sensor script for use with cron
 # Peter Normington
 # 2019-03-02
