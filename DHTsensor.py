@@ -16,12 +16,13 @@ from time import *
 sensor = Adafruit_DHT.DHT22
 # Use GPIO17 for input (physical pin 11; GPIO Gen 0)
 gpio = 17
-# Identify file for output
-filename = "/home/peter/dht/th_log.csv"
 
 readingDateTime = datetime.datetime.now()
 readingDate = str(readingDateTime.strftime("%Y-%m-%d"))
 readingTime = str(readingDateTime.strftime("%H:%M:%S"))
+
+# Identify file for output
+filename = "/home/peter/dht/th_"+readingDate+".csv"
 
 # The read_retry method returns humidity and temperature in that order
 hdty,temp = Adafruit_DHT.read_retry(sensor, gpio)
