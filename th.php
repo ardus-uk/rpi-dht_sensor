@@ -39,7 +39,7 @@ foreach ($reverse_chronological as $line)
         {
                 echo "<tr>\n";
                 echo '<td bgcolor= "'.$column_colours[0].'">'.$readings[0]."</td>\n";
-                echo '<td bgcolor= "'.$column_colours[1].'">'.substr($readings[1],0,2).":00</td>\n";
+                echo '<td bgcolor= "'.$column_colours[1].'">'.substr($readings[1],0,5).":00</td>\n";
                 echo '<td bgcolor= "'.$column_colours[2].'">'.$readings[2]."</td>\n";
                 echo '<td bgcolor= "'.$column_colours[3].'">'.$readings[3]."</td>\n";
                 echo " </tr>\n";
