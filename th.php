@@ -26,15 +26,11 @@ echo "\n";
 echo '</tr>';
 echo "\n";
 
-$myfile = fopen($path.$filename, "r") or die("Unable to open file!");
+$lines = file($path.$filename);
 // Output until end-of-file
-$linecount = 0;
-while(!feof($myfile)) {
-    $line = fgets($myfile);
-    // The first line (headings) to be discarded
-    $linecount = $linecount + 1;
-    if ($linecount > 1)
-    {
+$reverse_chronological = array_reverse($lines);
+foreach ($reverse_chronological as $line) 
+{
         $col = 0;
         // Break the line at each comma into its component parts
         $readings = explode(",",$line);
@@ -48,9 +44,8 @@ while(!feof($myfile)) {
                 echo '<td bgcolor= "'.$column_colours[3].'">'.$readings[3]."</td>\n";
                 echo " </tr>\n";
         }
-    }
+
 }
-fclose($myfile);
 ?>
 </table>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
