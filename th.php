@@ -6,7 +6,7 @@
 <?php 
 $path = "/home/peter/dht/";
 $today = date("Y-m-d");
-$filename = "th_".$today."csv";
+$filename = "th_".$today.".csv";
 echo "<h2>Temperature and Humidity data for ".$today$."</h2>\n";
 echo "<h3>from Raspberry Pi u3apeter</h3>\n"; 
 echo "<h3>Reading data from file: ".$filename."</h3>\n"; 
