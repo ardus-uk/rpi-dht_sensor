@@ -27,10 +27,14 @@ filename = "/home/peter/dht/th_"+readingDate+".csv"
 # The read_retry method returns humidity and temperature in that order
 hdty,temp = Adafruit_DHT.read_retry(sensor, gpio)
 
+temp_in_range = temp > -20 and temp < 70
+humidity_in_range = hdty > 0 and hdty < 100
+
 # Write output as comma-separated values
-f = open(filename, "a")
-f.write(readingDate+",")
-f.write(readingTime+",")
-f.write(str("{:.1f},".format(temp)))
-f.write(str("{:.1f}\n".format(hdty)))
-f.close()
+if (temp_in_range and humidity_in_range):
+    f = open(filename, "a")
+    f.write(readingDate+",")
+    f.write(readingTime+",")
+    f.write(str("{:.1f},".format(temp)))
+    f.write(str("{:.1f}\n".format(hdty)))
+    f.close()
