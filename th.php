@@ -45,9 +45,9 @@ foreach ($reverse_chronological as $line)
         }
 
 }
+echo "</table>\n";
 echo "<h3>from Raspberry Pi u3apeter</h3>\n"; 
 ?>
-</table>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 <!--- Change reading interval --->
 </form> 
