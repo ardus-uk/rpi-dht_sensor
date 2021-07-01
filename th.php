@@ -7,8 +7,7 @@
 $path = "/home/peter/dht/";
 $today = date("Y-m-d");
 $filename = "th_".$today.".csv";
-echo "<h2>Temperature and Humidity data for ".$today."</h2>\n";
-echo "<h3>from Raspberry Pi u3apeter</h3>\n"; 
+#echo "<h2>Temperature and Humidity data for ".$today."</h2>\n";
 echo "<h3>Reading data from file: ".$filename."</h3>\n"; 
 $column_colours = ["lightgrey","lightcyan","peachpuff","lightblue"];
 
@@ -46,6 +45,7 @@ foreach ($reverse_chronological as $line)
         }
 
 }
+echo "<h3>from Raspberry Pi u3apeter</h3>\n"; 
 ?>
 </table>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
