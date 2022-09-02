@@ -14,8 +14,8 @@ from time import *
 
 # Identify the sensor; we have the DHT22
 sensor = Adafruit_DHT.DHT22
-# Use GPIO17 for input (physical pin 11; GPIO Gen 0)
-gpio = 17
+# Use GPIO4 for input on Raspberry Pi 4
+gpio = 4
 
 readingDateTime = datetime.datetime.now()
 readingDate = str(readingDateTime.strftime("%Y-%m-%d"))
